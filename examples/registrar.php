@@ -62,7 +62,7 @@ try {
         'images' => '/caminho/img/boleto', // caminho da pasta que contem as imagens presente no boleto, caso necessário passar o caminho completo e public. 
     ]);
 
-    $boletosRegistrados = $itau->registrar($boletos, $dadosComplementares);
+    $boletosRegistrados = $itau->registrar($boleto, $dadosComplementares);
 
     foreach($boletosRegistrados['data'] as $boletoResponse) {
         if ($stream = fopen($boletoResponse['file'], 'r')) {
