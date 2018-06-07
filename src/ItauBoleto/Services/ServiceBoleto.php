@@ -70,7 +70,7 @@ class ServiceBoleto
      * @param $cachePath
      * @return null|string
      */
-    public function printHtml(array $boleto, $logoEmpresa, $cachePath)
+    public function printHtml(array $boleto, $logoEmpresa, $cachePath, $imagesPath)
     {
         try {
             $factory = new BoletoFactory([
